@@ -5,7 +5,7 @@ Descargas de **ADQUIMIA** (gráficas comerciales desde planillas Excel). Softwar
 ## Qué se descarga
 
 - **ADQUIMIA_x.y.z_x64-setup.exe**: instalador de la app para Windows 10/11.
-- **ADQUIMIA-plugin-x.y.z.ccx**: plugin para Photoshop 26. Se instala aparte.
+- **ADQUIMIA-plugin-x.y.z.ccx** y **.zip**: el mismo plugin para Photoshop 26, para dos formas de instalarlo. Se instala aparte.
 
 ## Orden de instalación
 
@@ -27,11 +27,22 @@ La app se actualiza sola: al abrirse avisa si hay una versión nueva y la instal
 
 ## Instalar el plugin de Photoshop
 
-1. Descarga el `.ccx` de la misma release.
-2. Haz doble clic para instalarlo con Creative Cloud, o cárgalo con el UXP Developer Tool.
-3. En Photoshop abre el panel **ADQUIMIA** (menú Plugins). Se conecta solo a la app.
+El plugin no está firmado por Adobe, así que Photoshop lo trata como "no verificado". Hay dos formas de instalarlo; usa la primera si la PC tiene Creative Cloud Desktop.
 
-El plugin no se actualiza solo: si ADQUIMIA avisa que está desactualizado, descarga el `.ccx` nuevo y vuelve a instalarlo.
+**Con Creative Cloud Desktop** (`ADQUIMIA-plugin-x.y.z.ccx`)
+
+1. Cierra Photoshop y haz doble clic en el `.ccx`.
+2. Creative Cloud avisa que el plugin no fue verificado por Adobe: elige **Instalar localmente** y confirma.
+3. Abre Photoshop y el panel **ADQUIMIA** (menú Plugins).
+
+**Sin Creative Cloud, con el UXP Developer Tool** (`ADQUIMIA-plugin-x.y.z.zip`)
+
+1. Descomprime el `.zip` en una carpeta fija (por ejemplo `C:\ADQUIMIA\plugin`). No la muevas después.
+2. En Photoshop activa el modo desarrollador (Configuración → Plugins) y abre el UXP Developer Tool.
+3. **Add Plugin** → elige el `manifest.json` de esa carpeta → **Load**. Acepta el permiso de archivos si lo pide.
+4. Esta carga hay que repetirla si Photoshop se reinicia y el Developer Tool no la recuerda.
+
+En ambos casos el panel se conecta solo a la app. El plugin no se actualiza solo: si ADQUIMIA avisa que está desactualizado, descarga el archivo nuevo y vuelve a instalarlo.
 
 ## Recorte de fondos
 
