@@ -4,30 +4,23 @@ Descargas de **ADQUIMIA** (gráficas comerciales desde planillas Excel). Softwar
 
 ## Qué se descarga
 
-- **ADQUIMIA_x.y.z_x64-setup.exe**: instalador de la app para Windows 10/11.
-- **ADQUIMIA-plugin-x.y.z.zip**, **.ccx** e **install-plugin.ps1**: el plugin para Photoshop 26 y sus dos formas de instalarlo. Se instala aparte.
+- **ADQUIMIA_x.y.z_x64-setup.exe**: instalador de la app para Windows 10/11. **Es lo único que hace falta**: la app instala el plugin de Photoshop y el componente de recorte de fondos.
+- **ADQUIMIA-plugin-x.y.z.zip**, **.ccx** e **install-plugin.ps1**: el plugin por separado, solo para instalarlo a mano (ver al final).
 
-## Orden de instalación
+## Instalar (recomendado)
 
-El orden no es obligatorio, pero este evita pasos extra:
+1. Descarga el `.exe` de la última [release](../../releases/latest) y ejecútalo. Windows puede mostrar el aviso azul de SmartScreen, porque el instalador no está firmado: elige **Más información → Ejecutar de todas formas**. Se instala solo para tu usuario, sin permisos de administrador.
+2. Abre ADQUIMIA. Si Photoshop está instalado y no tiene el plugin, aparece **"Falta instalar el plugin de Photoshop"**: pulsa **Instalar plugin** (Windows puede pedir permisos de administrador si Photoshop está en `Program Files`).
+3. Cierra Photoshop por completo y vuelve a abrirlo. En **Plugins → ADQUIMIA** abre el panel: se conecta solo a la app.
+4. Para quitar fondos de las fotos, la app ofrece **Instalar** el componente (Python y librerías, varios cientos de MB). Hace falta internet y se hace una sola vez.
 
-1. Instala la app y ábrela una vez (crea la carpeta que usa el plugin).
-2. Instala el plugin y abre el panel **ADQUIMIA** en Photoshop: se conecta solo.
-3. Si necesitas recortar fondos, instala el componente desde la app.
+**Actualizaciones:** al abrirse, la app avisa si hay una versión nueva y la instala cuando lo pides. Si la versión nueva trae un plugin nuevo, la app ofrece actualizarlo también.
 
-Si instalas el plugin primero, el panel avisa que no encuentra la carpeta de ADQUIMIA; abre la app una vez y vuelve a abrir el panel.
+**Si el plugin desaparece** (por ejemplo, tras actualizar Photoshop): en el menú lateral de la app, la línea "Plugin de Photoshop" tiene el botón **Reinstalar** (o **Instalar**).
 
-## Instalar la app
+## Instalar el plugin a mano (opcional)
 
-1. Descarga el `.exe` de la última [release](../../releases/latest) y ejecútalo.
-2. Windows puede mostrar el aviso azul de SmartScreen, porque el instalador no está firmado: elige **Más información → Ejecutar de todas formas**.
-3. Se instala solo para tu usuario, sin permisos de administrador.
-
-La app se actualiza sola: al abrirse avisa si hay una versión nueva y la instala cuando lo pides.
-
-## Instalar el plugin de Photoshop
-
-El plugin no está firmado por Adobe, así que Photoshop lo trata como "no verificado". Hay dos formas de instalarlo.
+Solo si no quieres hacerlo desde la app. El plugin no está firmado por Adobe, así que Photoshop lo trata como "no verificado". Hay dos formas.
 
 **Sin Creative Cloud (probado en Photoshop 26)** · archivos `ADQUIMIA-plugin-x.y.z.zip` e `install-plugin.ps1`
 
@@ -45,7 +38,7 @@ Este método no es oficial de Adobe: una actualización de Photoshop puede borra
 2. Creative Cloud avisa que el plugin no fue verificado por Adobe: elige **Instalar localmente** y confirma.
 3. Abre Photoshop y el panel **ADQUIMIA** (menú Plugins).
 
-El plugin no se actualiza solo: si ADQUIMIA avisa que está desactualizado, descarga el archivo nuevo y vuelve a instalarlo.
+Instalado a mano, el plugin no se actualiza solo: si ADQUIMIA avisa que está desactualizado, instala el nuevo desde la app o descarga el archivo y repite estos pasos.
 
 ## Recorte de fondos
 
