@@ -1,0 +1,37 @@
+LICENCIA PROPIETARIA · ADQUIMIA
+
+Copyright (c) 2026 Pablo Pramparo. Todos los derechos reservados.
+
+Este software y su documentación (en adelante, "ADQUIMIA") son propiedad exclusiva de
+Pablo Pramparo. Esta licencia no vende ni cede ADQUIMIA: otorga permisos limitados.
+
+1. USO PERMITIDO
+   Se permite instalar y usar ADQUIMIA, sin fines de redistribución, únicamente a las
+   personas y organizaciones que su titular autorice por escrito o mediante la entrega
+   directa del instalador.
+
+2. USOS PROHIBIDOS
+   Sin autorización previa y por escrito de su titular, queda prohibido:
+   a. copiar, modificar, traducir o crear obras derivadas de ADQUIMIA o de su código fuente;
+   b. redistribuir, sublicenciar, alquilar, vender o poner ADQUIMIA a disposición de terceros;
+   c. descompilar, desensamblar o intentar obtener el código fuente, salvo en la medida en que
+      la ley aplicable lo permita aun contra pacto en contrario;
+   d. eliminar o alterar avisos de propiedad, de autoría o de derechos reservados;
+   e. usar el nombre, el logotipo o la marca ADQUIMIA fuera de su uso normal con el software.
+
+3. CÓDIGO DE TERCEROS
+   ADQUIMIA incluye o descarga componentes de terceros (por ejemplo Tauri, React, SQLite,
+   rembg y ONNX Runtime) que se rigen por sus propias licencias, las cuales prevalecen para
+   esos componentes. Esta licencia no modifica los derechos que esas licencias otorgan.
+
+4. SIN GARANTÍA
+   ADQUIMIA se entrega "tal cual", sin garantías de ningún tipo, expresas o implícitas,
+   incluidas las de comerciabilidad, adecuación a un fin particular y no infracción. Su
+   titular no será responsable por daños derivados del uso o la imposibilidad de uso del
+   software, incluida la pérdida de datos o de archivos.
+
+5. TERMINACIÓN
+   Esta licencia termina automáticamente si se incumple cualquiera de sus condiciones.
+   Al terminar, debe dejarse de usar ADQUIMIA y eliminar todas sus copias.
+
+Para pedir autorización o consultar por otros usos: pablo.pramparo@gmail.com
