@@ -5,7 +5,7 @@ Descargas de **ADQUIMIA** (gráficas comerciales desde planillas Excel). Softwar
 ## Qué se descarga
 
 - **ADQUIMIA_x.y.z_x64-setup.exe**: instalador de la app para Windows 10/11.
-- **ADQUIMIA-plugin-x.y.z.ccx** y **.zip**: el mismo plugin para Photoshop 26, para dos formas de instalarlo. Se instala aparte.
+- **ADQUIMIA-plugin-x.y.z.zip**, **.ccx** e **install-plugin.ps1**: el plugin para Photoshop 26 y sus dos formas de instalarlo. Se instala aparte.
 
 ## Orden de instalación
 
@@ -27,22 +27,25 @@ La app se actualiza sola: al abrirse avisa si hay una versión nueva y la instal
 
 ## Instalar el plugin de Photoshop
 
-El plugin no está firmado por Adobe, así que Photoshop lo trata como "no verificado". Hay dos formas de instalarlo; usa la primera si la PC tiene Creative Cloud Desktop.
+El plugin no está firmado por Adobe, así que Photoshop lo trata como "no verificado". Hay dos formas de instalarlo.
 
-**Con Creative Cloud Desktop** (`ADQUIMIA-plugin-x.y.z.ccx`)
+**Sin Creative Cloud (probado en Photoshop 26)** · archivos `ADQUIMIA-plugin-x.y.z.zip` e `install-plugin.ps1`
+
+1. Descomprime el `.zip` en una carpeta y copia dentro de ella `install-plugin.ps1`.
+2. Cierra Photoshop, abre PowerShell en esa carpeta y ejecuta:
+   `powershell -ExecutionPolicy Bypass -File .\install-plugin.ps1`
+3. El script busca Photoshop, copia el plugin a su carpeta `Plug-ins\ADQUIMIA` y pide permisos de administrador solo si hacen falta. Para quitarlo: el mismo comando con `-Uninstall`.
+4. Abre Photoshop y el panel **ADQUIMIA** (menú Plugins): se conecta solo.
+
+Este método no es oficial de Adobe: una actualización de Photoshop puede borrar la copia. Si pasa, vuelve a ejecutar el script. Si cargaste el plugin con el UXP Developer Tools, descárgalo antes: tiene el mismo id y se duplicaría.
+
+**Con Creative Cloud Desktop** · archivo `ADQUIMIA-plugin-x.y.z.ccx`
 
 1. Cierra Photoshop y haz doble clic en el `.ccx`.
 2. Creative Cloud avisa que el plugin no fue verificado por Adobe: elige **Instalar localmente** y confirma.
 3. Abre Photoshop y el panel **ADQUIMIA** (menú Plugins).
 
-**Sin Creative Cloud, con el UXP Developer Tools** (`ADQUIMIA-plugin-x.y.z.zip`). Sirve la extensión «Adobe UXP Developer Tools» de Visual Studio Code, que no necesita Creative Cloud.
-
-1. Descomprime el `.zip` en una carpeta fija (por ejemplo `C:\ADQUIMIA\plugin`). No la muevas después.
-2. En Photoshop activa el modo desarrollador (Configuración → Plugins) y abre el UXP Developer Tools (en VS Code: panel de UXP).
-3. **Add Plugin** → elige el `manifest.json` de esa carpeta → **Load**. Acepta el permiso de archivos si lo pide. (No lo pude comprobar en una PC sin Creative Cloud.)
-4. Esta carga hay que repetirla si Photoshop se reinicia y el Developer Tool no la recuerda.
-
-En ambos casos el panel se conecta solo a la app. El plugin no se actualiza solo: si ADQUIMIA avisa que está desactualizado, descarga el archivo nuevo y vuelve a instalarlo.
+El plugin no se actualiza solo: si ADQUIMIA avisa que está desactualizado, descarga el archivo nuevo y vuelve a instalarlo.
 
 ## Recorte de fondos
 
