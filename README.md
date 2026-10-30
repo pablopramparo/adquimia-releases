@@ -35,11 +35,11 @@ El plugin no está firmado por Adobe, así que Photoshop lo trata como "no verif
 2. Creative Cloud avisa que el plugin no fue verificado por Adobe: elige **Instalar localmente** y confirma.
 3. Abre Photoshop y el panel **ADQUIMIA** (menú Plugins).
 
-**Sin Creative Cloud, con el UXP Developer Tool** (`ADQUIMIA-plugin-x.y.z.zip`)
+**Sin Creative Cloud, con el UXP Developer Tools** (`ADQUIMIA-plugin-x.y.z.zip`). Sirve la extensión «Adobe UXP Developer Tools» de Visual Studio Code, que no necesita Creative Cloud.
 
 1. Descomprime el `.zip` en una carpeta fija (por ejemplo `C:\ADQUIMIA\plugin`). No la muevas después.
-2. En Photoshop activa el modo desarrollador (Configuración → Plugins) y abre el UXP Developer Tool.
-3. **Add Plugin** → elige el `manifest.json` de esa carpeta → **Load**. Acepta el permiso de archivos si lo pide.
+2. En Photoshop activa el modo desarrollador (Configuración → Plugins) y abre el UXP Developer Tools (en VS Code: panel de UXP).
+3. **Add Plugin** → elige el `manifest.json` de esa carpeta → **Load**. Acepta el permiso de archivos si lo pide. (No lo pude comprobar en una PC sin Creative Cloud.)
 4. Esta carga hay que repetirla si Photoshop se reinicia y el Developer Tool no la recuerda.
 
 En ambos casos el panel se conecta solo a la app. El plugin no se actualiza solo: si ADQUIMIA avisa que está desactualizado, descarga el archivo nuevo y vuelve a instalarlo.
